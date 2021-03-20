@@ -73,6 +73,6 @@ textarea{
 
 
 .row :hover {
-  background-color: blue;
+  background-color: gray;
   opacity: 75%;
 }

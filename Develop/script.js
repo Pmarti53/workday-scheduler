@@ -1,5 +1,7 @@
 var time = moment().format("LTS");
 
+
+
 function Repopulate() {
     for (i = 7; i < 12; i++) {
         var storedtext = localStorage.getItem("text-" + i)
@@ -14,13 +16,14 @@ function clock() {
     }, 1000);
 }
 
-
+// div selection function
 $(document).ready(function () {
     $(".row").click(function () {
         // console.log("div was selected");
     });
 });
 
+//enter text fucntion
 $(document).ready(function () {
     $(".row").append('<p><a id=".row-1" href="#"></a></p>');
     $('#myLink').on('click',
@@ -30,6 +33,7 @@ $(document).ready(function () {
     );
 });
 
+// save function
 $(".saveBtn").on("click", function () {
     var timeClicked = $(this).siblings(".textinput").attr('id');
     var eventInput = $(this).siblings(".textinput").val();
@@ -37,9 +41,6 @@ $(".saveBtn").on("click", function () {
     console.log(localStorage.getItem('timeClicked'))
 
 });
-
-
-
 
 
 
